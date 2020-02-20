@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>demo</title>
+<style>
+/* 基本のレイアウトの指定 */
+.Layout {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header header" 200px
+    "nav    main  " 1fr
+    "nav    footer" 150px
+    /200px 1fr
+  ;
+}
+
+/* 狭い画面でのレイアウトの指定 */
+@media screen and (max-width: 500px) {
+  .Layout {
+    grid-template:
+      "header" 150px
+      "nav   " auto
+      "main  " 1fr
+      "footer" 100px
+      /1fr
+   ;
+ }
+}
+/* 各要素の指定 */
+.Layout_Header { grid-area: header; }
+.Layout_Nav { grid-area: nav; }
+.Layout_MainContents { grid-area: main; }
+.Layout_Footer { grid-area: footer; }
+
+/* 装飾 */
+.Layout {
+  padding: 30px;
+  height: calc(100% - 60px);
+}
+.Layout > * { padding: 30px; }
+.Layout_Header { background-color: #000; }
+.Layout_Nav { background-color: #c29800; }
+.Layout_MainContents { background-color: #2567e5; }
+.Layout_Footer {background-color: #800; }
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+
+<div class="Layout">
+  <div class="Layout_Header"></div>
+  <div class="Layout_Nav"></div>
+  <div class="Layout_MainContents"></div>
+  <div class="Layout_Footer"></div>
+</div>
+
+</body>
+</html>

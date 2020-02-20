@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>demo</title>
+<style>
+/* 基本のレイアウトの指定 */
+.Layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.Layout_Header {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.Layout_Body {
+  flex: 1 1 auto;
+  display: flex;
+}
+.Layout_Nav {
+  flex: 0 0 auto;
+  width: 200px;
+}
+.Layout_Main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.Layout_MainContents {
+  flex: 1 1 auto;
+  margin-bottom: 10px;
+}
+.Layout_Footer {
+  flex: 0 0 auto;
+  height: 150px;
+}
+
+/* 狭い画面でのレイアウトの指定 */
+@media screen and (max-width: 500px) {
+  .Layout_Body {
+    flex-direction: column;
+  }
+  .Layout_Header {
+    height: 150px;
+  }
+  .Layout_Nav {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .Layout_Main {
+    margin-left: 0;
+  }
+  .Layout_Footer {
+    flex: 0 0 auto;
+    height: 100px;
+  }
+}
+
+/* 装飾 */
+.Layout {
+  box-sizing: border-box;
+  padding: 30px;
+}
+.Layout * { box-sizing: border-box; }
+.Layout_Header { padding: 30px; background-color: #000; }
+.Layout_Nav { padding: 30px; background-color: #c29800; }
+.Layout_MainContents { padding: 30px; background-color: #2567e5; }
+.Layout_Footer { padding: 30px; background-color: #800; }
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+
+<div class="Layout">
+  <div class="Layout_Header"></div>
+  <div class="Layout_Body">
+    <div class="Layout_Nav"></div>
+    <div class="Layout_Main">
+      <div class="Layout_MainContents"></div>
+      <div class="Layout_Footer"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

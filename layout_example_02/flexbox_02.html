@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>demo</title>
+<style>
+form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+label {
+  flex: 1 1 200px;
+  margin-right: 10px;
+}
+
+label span {
+  display: block;
+  padding: 5px;
+  font-size: 12px;
+}
+
+label input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  box-sizing: border-box;
+  flex: 1 1 200px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-right: 10px;
+  font: inherit;
+}
+</style>
+</head>
+<body>
+
+<form>
+  <label>
+    <span>名前</span>
+    <input type="text">
+  </label>
+  <label>
+    <span>メールアドレス</span>
+    <input type="email">
+  </label>
+  <button type="submit">送信</button>
+</form>
+
+</body>
+</html>
