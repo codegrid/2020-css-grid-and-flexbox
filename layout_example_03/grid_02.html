@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>demo</title>
+<style>
+/* 基本のレイアウトの指定 */
+.List {
+  display: grid;
+  grid-template-columns: repeat(2, auto 1fr) ;
+  gap: 10px;
+}
+/* 装飾 */
+.List {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.List_Title {
+  padding: 10px;
+  background-color: #ffb6b8;
+  font-weight: bold;
+}
+.List_Description {
+  padding: 10px;
+  margin-left: 0;
+  background-color: #afc0fa;
+}
+body {
+  margin: 0;
+}
+</style>
+</head>
+<body>
+
+<dl class="List">
+  <dt class="List_Title">見出し1</dt>
+  <dd class="List_Description">テキスト1</dd>
+  <dt class="List_Title">見出し2</dt>
+  <dd class="List_Description">テキストテキスト2</dd>
+  <dt class="List_Title">見出し3</dt>
+  <dd class="List_Description">テキストテキスト3テキストテキスト3</dd>
+  <dt class="List_Title">見出し4</dt>
+  <dd class="List_Description">テキストテキスト4</dd>
+  <dt class="List_Title">見出し5</dt>
+  <dd class="List_Description">テキストテキスト5テキストテキスト5テキストテキスト5</dd>
+  <dt class="List_Title">見出し6見出し6</dt>
+  <dd class="List_Description">テキストテキスト6</dd>
+  <dt class="List_Title">見出し7見出し7</dt>
+  <dd class="List_Description">テキストテキスト7</dd>
+</dl>
+
+</body>
+</html>

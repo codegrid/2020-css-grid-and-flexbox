@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>demo</title>
+<style>
+/* 基本のレイアウトの指定 */
+.List {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+.List_Item {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: calc(50% - 10px);
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.List_Title {
+  flex: 0 1 auto;
+  min-width: 100px;
+  margin-right: 10px;
+}
+.List_Description {
+  flex: 1 1 auto;
+}
+
+/* 装飾 */
+.List {
+  margin-bottom: 0;
+}
+.List_Title {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #ffb6b8;
+  font-weight: bold;
+}
+.List_Description {
+  box-sizing: border-box;
+  padding: 10px;
+  margin-left: 0;
+  background-color: #afc0fa;
+}
+body {
+  margin: 0;
+}
+</style>
+</head>
+<body>
+
+<dl class="List">
+  <div class="List_Item">
+    <dt class="List_Title">見出し1</dt>
+    <dd class="List_Description">テキストテキスト1</dd>
+  </div>
+  <div class="List_Item">
+    <dt class="List_Title">見出し2</dt>
+    <dd class="List_Description">テキストテキスト2</dd>
+  </div>
+  <div class="List_Item">
+    <dt class="List_Title">見出し3</dt>
+    <dd class="List_Description">テキストテキスト3</dd>
+  </div>
+  <div class="List_Item">
+    <dt class="List_Title">見出し4</dt>
+    <dd class="List_Description">テキストテキスト4</dd>
+  </div>
+  <div class="List_Item">
+    <dt class="List_Title">見出し5</dt>
+    <dd class="List_Description">テキストテキスト5</dd>
+  </div>
+  <div class="List_Item">
+    <dt class="List_Title">見出し6</dt>
+    <dd class="List_Description">テキストテキスト6</dd>
+  </div>
+</dl>
+
+</body>
+</html>
